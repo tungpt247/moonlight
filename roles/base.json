@@ -1,0 +1,11 @@
+{
+  "name": "base",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Base ",
+  "run_list": [
+    "recipe[e_apt]",
+    "recipe[locale]",
+    "recipe[nodejs]"
+  ]
+}

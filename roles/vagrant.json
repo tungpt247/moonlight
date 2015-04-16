@@ -1,0 +1,33 @@
+{
+  "name": "vagrant",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Start up vagrant box",
+  "run_list": [
+    "role[base]",
+    "role[rvm_vagrant]",
+    "role[database]",
+    "role[web]",
+    "role[app]"
+  ],
+  "default_attributes": {
+    "app_name": "footy",
+    "user": "vagrant",
+    "authorization": {
+      "sudo": {
+        "groups": ["admin", "wheel", "sysadmin"],
+        "users": ["vagrant", "deploy"],
+        "passwordless": "true"
+      }
+    }
+  },
+  "override_attributes": {
+    "app_name": "footy",
+    "user": "vagrant",
+    "authorized_keys": [
+      "ssh-rsa AsadsadsecretZZZ deployer@example.com",
+      "ssh-rsa AsadsadsecretZZZ me@example.com",
+      "ssh-rsa BsadsadsecretZZZ contributor@example.com"
+    ]
+  }
+}

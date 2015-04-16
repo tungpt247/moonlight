@@ -1,0 +1,34 @@
+{
+  "name": "rvm_vagrant",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "The role that used to install RVM, Ruby, Rails servers",
+
+  "default_attributes": {
+    "rvm": {
+      "install_rubies": true,
+      "rubies": ["ruby-2.2.0"],
+      "default_ruby": "2.2.0",
+      "global_gems": [
+        { "name": "bundler" },
+        { "name": "rake" }
+      ],
+      "gems": {
+        "ruby-2.2.0": [
+          { "name": "sass" },
+          { "name": "compass" },
+          { "name": "rake" },
+          { "name": "bundler" },
+          { "name": "rails" }
+        ]
+      },
+      "gpg": {
+        "homedir": "/root"
+      }
+    }
+  },
+  "run_list": [
+      "recipe[e_rvm]",
+      "recipe[rvm::system]"
+  ]
+}

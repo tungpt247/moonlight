@@ -1,0 +1,11 @@
+name             'e_app'
+maintainer       'The Authors'
+maintainer_email 'tungpt247@gmail.com'
+license          'all_rights'
+description      'Installs/Configures e_app'
+long_description 'Installs/Configures e_app'
+version          '0.1.0'
+
+depends 'e_sys_users'
+depends 'e_nginx'
+depends 'e_unicorn'

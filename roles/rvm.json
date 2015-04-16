@@ -1,0 +1,9 @@
+{
+  "name": "rvm",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Setting RVM - Ruby",
+  "run_list": [
+    "recipe[e_rvm]"
+  ]
+}

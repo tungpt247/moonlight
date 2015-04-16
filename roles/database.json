@@ -1,0 +1,9 @@
+{
+  "name": "database",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Setting Postgres database",
+  "run_list": [
+    "recipe[e_postgresql]"
+  ]
+}
