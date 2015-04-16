@@ -14,7 +14,7 @@ set -u
 RAILS_ENV=production
 TIMEOUT=${TIMEOUT-60}
 APP_ROOT=/home/<%=@user%>/<%=@app_name%>/current
-PID=$APP_ROOT/tmp/pids/unicorn.pid
+PID=/home/<%=@user%>/<%=@app_name%>/shared/pids/unicorn.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
 AS_USER=<%=@user%>
 set -e
