@@ -1,0 +1,30 @@
+<!-- server {
+  listen 8080;
+
+  location / {
+    root /home/<%= @app_name %>/production/current/public;
+    index index.html;
+  }
+  server_name <%= @app_name %>.vps.com;
+} -->
+
+server {
+  listen 8080;
+    root /home/<%= @app_name %>/production/current/public;
+  server_name <%= @app_name %>.vps.com;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
+
+
+server {
+  listen 8080;
+  root /home/<%= @app_name %>/production/current/public;
+  server_name <%= @app_name %>.vps.com;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}

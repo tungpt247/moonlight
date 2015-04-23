@@ -1,0 +1,29 @@
+{
+  "name": "development",
+  "description": "Development mode",
+  "cookbook_versions": {
+
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "app_name": "footy",
+    "user": "vagrant",
+    "authorization": {
+      "sudo": {
+        "groups": ["admin", "wheel", "sysadmin"],
+        "users": ["vagrant", "deploy"],
+        "passwordless": "true"
+      }
+    }
+  },
+  "override_attributes": {
+    "app_name": "footy",
+    "user": "vagrant",
+    "authorized_keys": [
+      "ssh-rsa AsadsadsecretZZZ deployer@example.com",
+      "ssh-rsa AsadsadsecretZZZ me@example.com",
+      "ssh-rsa BsadsadsecretZZZ contributor@example.com"
+    ]
+  }
+}

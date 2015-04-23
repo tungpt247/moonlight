@@ -1,9 +1,9 @@
 {
   "name": "database",
-  "chef_type": "role",
+  "description": "Database Configuration",
   "json_class": "Chef::Role",
-  "description": "Setting Postgres database",
+  "chef_type": "role",
   "run_list": [
-    "recipe[e_postgresql]"
+    "recipe[__postgresql]"
   ]
 }

@@ -1,0 +1,11 @@
+name             'rails_app'
+maintainer       'The Authors'
+maintainer_email 'tungphan@asnet.com.vn'
+license          'all_rights'
+description      'Installs/Configures rails_app'
+long_description 'Installs/Configures rails_app'
+version          '0.1.0'
+
+depends 'sys_users'
+depends '__nginx'
+depends '__unicorn'

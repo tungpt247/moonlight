@@ -1,0 +1,22 @@
+{
+  "name": "deploy",
+  "description": "Just for deploy to real server",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "role[rvm]",
+    "role[web]",
+    "role[database]",
+    "role[rails_app]"
+  ],
+  "override_attributes": {
+    "app_name": "footy",
+    "user": "deployer",
+    "authorized_keys": [
+      "ssh-rsa AsadsadsecretZZZ deployer@example.com",
+      "ssh-rsa AsadsadsecretZZZ me@example.com",
+      "ssh-rsa BsadsadsecretZZZ contributor@example.com"
+    ]
+  }
+}
