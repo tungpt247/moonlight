@@ -1,4 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'berkshelf'
-gem 'knife-solo'
+gem "berkshelf"
+gem "test-kitchen"
+gem "kitchen-vagrant"
+gem "knife-solo"

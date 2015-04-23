@@ -1,26 +1,16 @@
 {
   "name": "vagrant",
-  "chef_type": "role",
+  "description": "Just for vagrant",
   "json_class": "Chef::Role",
-  "description": "Start up vagrant box",
+  "chef_type": "role",
   "run_list": [
     "role[base]",
     "role[rvm_vagrant]",
-    "role[database]",
     "role[web]",
-    "role[app]"
+    "role[database]",
+    "recipe[__imagemagic]",
+    "role[rails_app]"
   ],
-  "default_attributes": {
-    "app_name": "footy",
-    "user": "vagrant",
-    "authorization": {
-      "sudo": {
-        "groups": ["admin", "wheel", "sysadmin"],
-        "users": ["vagrant", "deploy"],
-        "passwordless": "true"
-      }
-    }
-  },
   "override_attributes": {
     "app_name": "footy",
     "user": "vagrant",

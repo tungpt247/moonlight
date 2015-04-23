@@ -18,5 +18,5 @@ platforms:
 suites:
   - name: moonlight
     run_list:
-      - role[vagrant]
+      - recipe[usersbags]
     attributes:

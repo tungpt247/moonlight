@@ -1,11 +1,18 @@
 {
   "name": "base",
-  "chef_type": "role",
+  "description": "Required by System",
   "json_class": "Chef::Role",
-  "description": "Base ",
+  "chef_type": "role",
   "run_list": [
-    "recipe[e_apt]",
+    "recipe[__apt]",
     "recipe[locale]",
-    "recipe[nodejs]"
-  ]
+    "recipe[nodejs]",
+    "recipe[git]"
+  ],
+  "override_attributes": {
+    "locale": {
+      "lang": "en_US.utf8",
+      "lc_all": "en_US.utf8"
+    }
+  }
 }

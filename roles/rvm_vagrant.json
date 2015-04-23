@@ -28,7 +28,7 @@
     }
   },
   "run_list": [
-      "recipe[e_rvm]",
+      "recipe[__rvm]",
       "recipe[rvm::system]"
   ]
 }

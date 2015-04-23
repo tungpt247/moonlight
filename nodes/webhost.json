@@ -1,0 +1,10 @@
+{
+  "name": "webhost",
+  "environment": "development",
+  "run_list": [
+    "role[vagrant]"
+  ],
+  "automatic": {
+    "ipaddress": "webhost"
+  }
+}

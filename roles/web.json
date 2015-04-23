@@ -1,9 +1,9 @@
 {
   "name": "web",
-  "chef_type": "role",
+  "description": "Initialize Nginx",
   "json_class": "Chef::Role",
-  "description": "Setting Nginx",
+  "chef_type": "role",
   "run_list": [
-    "recipe[e_nginx]"
+    "recipe[__nginx]"
   ]
 }
